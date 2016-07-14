@@ -1,0 +1,5 @@
+set() Write or replace data to a defined path, such as users/<user-id>/<username>.
+push()  Add to a list of data. Every time you call push(), Firebase generates a unique ID, such as user-posts/<user-id>/<unique-post-id>.
+update()  Update some of the keys for a defined path without replacing all of the data.
+transaction() Update complex data that could be corrupted by concurrent updates.
+
