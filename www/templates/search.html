@@ -1,6 +1,13 @@
 <ion-view view-title="Search">
   <ion-content>
     <h1>{{lat}} {{long}}</h1>
-
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Pokemon Name" ng-model="pokemon">
+      </label>
+      <button class="button button-royal" ng-click="subPokemon(pokemon)">Submit</button>
+    </div>
   </ion-content>
 </ion-view>
+
+//ng model ng click and scope

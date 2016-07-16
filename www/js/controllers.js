@@ -47,12 +47,25 @@ angular.module('starter.controllers', [])
   function success (pos) {
     $scope.long= pos.coords.longitude;
     $scope.lat= pos.coords.latitude;
+/*    $scope.buttonclick=function (e){
+      console.log('hello button');
+    };*/
     var ref = firebase.database().ref();
     ref.child('main').update({
       long: pos.coords.longitude,
       lat: pos.coords.latitude,
     });
   }
+  $scope.subPokemon = function (pokemon) {
+/*    var ref = firebase.database().ref();
+    ref.child('main').update({
+      pokeName: pokemon
+    });*/
+    var ref = firebase.database().ref();
+    ref.child('main').update({
+      pokemonName: pokemon
+    });
+  };
 })
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
